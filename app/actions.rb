@@ -4,5 +4,7 @@ get '/' do
 end
 
 get '/messages' do
-erb :'messages/index'
+  @messages = Message.all
+  erb :'messages/index'
 end
+
