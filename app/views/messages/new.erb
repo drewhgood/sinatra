@@ -12,13 +12,25 @@
 <% end %>
 
 <form method="post" action="/messages">
+  
   <div>
     <label>Subject:</label>
-    <input type="text" name="author" value="<%= @message && @message.author %>">  </div>
+    <input type="text" name="author" value="<%= @message && @message.author %>"> 
+    </div>
+  
   <div>
     <label>Content:</label>
-    <input type="text" name="content" value="<%= @message && @message.content %>">  </div>
+    <input type="text" name="content" value="<%= @message && @message.content %>">  
+    </div>
+ 
+  
+  <div>
+    <label>URL: <em>(optional)</em></label>
+    <input type="text" name="url" value="<%= @message && @message.url %>">  
+    </div>
+ <br>
   <div>
     <input type="submit" value="Submit">
   </div>
+
 </form>

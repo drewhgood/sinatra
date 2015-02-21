@@ -1,10 +1,18 @@
 <h1>Messages</h1>
 
 <% @messages.each do |message| %>
+ 
   <div class="message">
-<h3><a href="/messages/<%= message.id %>"><%= message.author %></a> </h3>
-    <p>
-      <%= message.content %>
-    </p>
+    
+    <h3><a href="/messages/<%= message.id %>"><%= message.author %></a></h3>
+    
+    <p><%= message.content %></p>
+    
+   <% if message.url %>
+      <p><%=message.url%></p>
+  <%end%>
+    
+
   </div>
+
 <% end %>
