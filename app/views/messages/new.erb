@@ -14,16 +14,13 @@
 <form method="post" action="/messages">
   <div>
     <label>Author:</label>
-    <input type="text" name="author">
-  </div>
+<input type="text" name="author" value="<%= @message && @message.author %>">  </div>
   <div>
     <label>Subject:</label>
-    <input type="text" name="title">
-  </div>
+<input type="text" name="title" value="<%= @message && @message.author %>">  </div>
   <div>
     <label>Content:</label>
-    <input type="text" name="content">
-  </div>
+<input type="text" name="content" value="<%= @message && @message.author %>">  </div>
   <div>
     <input type="submit" value="Submit">
   </div>
