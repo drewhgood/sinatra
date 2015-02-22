@@ -12,5 +12,16 @@
   <%= @message.url  %>
 </p>
 
+<h2> More from this author </h2>
+
+  <% Message.where("author = 'test'").each do |message| %>
+ 
+    <p><%= message.content %></p>
+ 
+  <%end%>
+    
+
+
+
 <hr/>
 <a href="/messages">Back to All Messages</a>
